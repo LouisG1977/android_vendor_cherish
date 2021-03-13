@@ -251,6 +251,8 @@ $(call inherit-product, vendor/cherish/config/audio.mk)
 
 ifeq ($(CHERISH_NONGAPPS), true)
 include vendor/cherish/config/basicapps.mk
+include vendor/opfilemanager/config.mk
+$(call inherit-product, vendor/oplauncher/OPLauncher.mk)
 else
 # GApps
 $(call inherit-product, vendor/gapps/config.mk)
